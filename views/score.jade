@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    title!= title
+    link(href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet")
+
+  body
+    h1.text-center Scores
+    .col-sm-4.col-sm-offset-4.text-center
+      .buttons.well(data-id="first")
+        h2 Image 1
+        img(src="http://placehold.it/345x200&text=1").thumbnail
+        include partials/score_buttons
+
+      .buttons.well(data-id="second")
+        h2 Image 2
+        img(src="http://placehold.it/345x200&text=2").thumbnail
+        include partials/score_buttons
+
+    script(src="//code.jquery.com/jquery.js")
+    script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
+    script(src="/js/score.js")
