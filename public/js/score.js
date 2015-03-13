@@ -9,8 +9,8 @@ $('.buttons').on('click', 'button', function(e){
     type: 'POST',
     contentType: 'application/json',
     dataType: 'json',
-    url: 'http://localhost:3000/score/' + id + '/votes',
-    data: JSON.stringify({score: score }),
+    url: 'http://localhost:3000/image/' + id + '/score/' + score,
+    data: JSON.stringify({ score: score, id: id }),
     complete: voteCast
   });
 
