@@ -1,3 +1,5 @@
+var score_results = [];
+
 $('.buttons').on('click', 'button', function(e){
   e.preventDefault();
   
@@ -14,11 +16,13 @@ $('.buttons').on('click', 'button', function(e){
     complete: voteCast
   });
 
+  score_results.push({ votes: { image: id, score: score } });
+  
   console.log(target);
   console.log(id);
   console.log(score);
 });
 
 function voteCast () {
-  console.log('Vote is cast');
+  console.log('Vote is cast', score_results);
 }

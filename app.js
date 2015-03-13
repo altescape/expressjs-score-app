@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-
+var score_results = [];
 app.use(bodyParser.json());
 
 app.use(function (req, res, next) {
