@@ -18,9 +18,9 @@ $('.buttons').on('click', 'button', function(e){
 
   score_results.push({ votes: { image: id, score: score } });
   
-  console.log(target);
-  console.log(id);
-  console.log(score);
+  //console.log(target);
+  //console.log(id);
+  //console.log(score);
 });
 
 function voteCast () {

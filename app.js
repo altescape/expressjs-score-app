@@ -17,6 +17,7 @@ app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
+  console.log(score_results);
   res.render('index', { title: 'Hey', message: 'Hello there!' });
 });
 
@@ -27,6 +28,7 @@ app.get('/image', function (req, res) {
 app.post('/image/:image/score/:score', function (req, res) {
   var image = req.params.image;
   var score = req.params.score;
+  score_results.push({image: image, score: score});
   res.status(201).json({ votes: { image: image, score: score } });
   //res.render('votes', { votes: { image: image, score: score } }); 
 });
